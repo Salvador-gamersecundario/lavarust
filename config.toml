@@ -1,53 +1,15 @@
-# Configuración del servidor
 [server]
-# Puerto en el que escuchará Hearth
 port = 30031
-# Host al que se enlazará (0.0.0.0 = accesible desde fuera)
 host = "0.0.0.0"
-# Contraseña para autenticar clientes (debe coincidir con tu bot)
 password = "youshallnotpass"
-# Tiempo máximo de espera para conexiones entrantes (en segundos)
-timeout = 30
 
-# Configuración de logging
 [logging]
-# Nivel de logs: "trace", "debug", "info", "warn", "error"
 level = "info"
 
-# Configuración de plugins (fuentes de música)
 [plugins]
-# Lista de plugins habilitados
-# Ejemplos: "youtube", "soundcloud", "bandcamp", "http", etc.
 enabled = [
     "youtube",
     "soundcloud",
     "bandcamp",
-    "http",
+    "http"
 ]
-
-# Configuración específica de plugins
-[plugins.youtube]
-# Ejemplo: usar una API key de YouTube si es necesario
-# api_key = "TU_API_KEY_DE_YOUTUBE"
-
-[plugins.soundcloud]
-# Opciones específicas para SoundCloud (si aplica)
-client_id = ""  # Opcional, si tienes un client ID
-
-# Configuración de seguridad
-[security]
-# Permitir conexiones desde hosts locales
-allow_local_address = true
-
-# Configuración de métricas (opcional)
-[metrics]
-# Habilitar endpoint para Prometheus (por ejemplo)
-enabled = false
-endpoint = "/metrics"
-
-# Configuración avanzada (opcional)
-[advanced]
-# Número de hilos concurrentes para procesamiento
-workers = 4
-# Buffer de lectura para streams
-buffer_size = 8192
