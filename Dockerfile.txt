@@ -1,7 +1,0 @@
-FROM alpine:latest
-RUN apk add --no-cache ca-certificates
-ADD https://github.com/HearthAudio/Hearth/releases/latest/download/hearth-linux-x86_64 /hearth
-RUN chmod +x /hearth
-EXPOSE 30031
-ENV HEARTH_SERVER_PORT=30031
-ENTRYPOINT ["/hearth"]
