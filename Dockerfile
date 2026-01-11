@@ -2,7 +2,7 @@ FROM alpine:latest
 RUN apk add --no-cache ca-certificates
 
 # Descargar el binario de Hearth desde el último release
-ADD https://github.com/HearthAudio/Hearth/releases/download/v0.6.0/hearth-linux-x86_64 /hearth
+https://github.com/HearthAudio/Hearth/releases/download/v0.1.1/hearth-linux-x86_64
 RUN chmod +x /hearth
 
 # Copiar el archivo de configuración si lo tienes
